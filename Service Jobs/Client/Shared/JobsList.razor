@@ -1,0 +1,69 @@
+﻿<ul class="list-unstyled">
+    @foreach (var job in Jobs)
+   {
+       <li class="media my-3">
+           <div class="media-img-wrapper mr-2">
+               <a href="#">
+               < class="media-img" src="@job.ImageUrl" alt="@job.Title" />
+               </a>
+           </div>
+           <div class="media-body" >
+               <a href="#">
+                   <h4 class="mb-0">@job.Title</h4>
+                   </a>
+                   <p>@job.Description</p>
+                   <h5 class="price">
+                       $@job.Price
+                   </h5>
+           </div>
+       </li>
+   }
+
+</ul>
+
+
+@code {
+    private static List<Job> Jobs = new List<Job>
+    {
+        new Job
+        {
+            Id = 1,
+            Title = "Fedor Savoyaz",
+            Description = "Engaged in large transportation in this company for more than 15 years",
+            ImageUrl ="https://upload.wikimedia.org/wikipedia/en/c/c7/Expeditors_International_logo.svg",
+            Price = 8757m,
+        },
+         new Job
+        {
+            Id = 2,
+            Title = "Marko Mimke",
+            Description = "Is engaged in transportation in Asia and Europe. Experience 28 years.",
+            ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/f/f3/Bollore_Logistics_Logo.png",
+            Price = 12434m
+        },
+         new Job
+        {
+            Id = 3,
+            Title = "Jack Uillyams",
+            Description = "Experience 6 years. Works for 2 companies.",
+            ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/b/bc/DB_Schenker_logo.svg",
+            Price = 700m
+        },
+         new Job
+        {
+            Id = 4,
+            Title ="Ivass Ayyyako",
+            Description="More than 32 years of experience in cargo transportation",
+            ImageUrl="https://upload.wikimedia.org/wikipedia/uk/e/e5/Kuenne%2Bnagel-kompany.jpg",
+            Price=18485m
+        },
+         new Job
+        {
+            Id = 5,
+            Title ="Jacob  Ozark",
+            Description="Has been working for more than 20 years in cargo transportation, also specializes in car repairs.",
+            ImageUrl="https://upload.wikimedia.org/wikipedia/commons/9/93/FedEx_Corporation_logo.svg",
+            Price=29485m
+        },
+    };
+}
